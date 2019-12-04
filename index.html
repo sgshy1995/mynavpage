@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./static/favicon.ico">
+    <link rel="stylesheet" href="./css/default.css">
+    <title>EDEN 导航页</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="searchPage" id="searchPage">
+            <input type="text" id="input">
+            <input type="submit" id="submit" value="搜索">
+        </div>
+        <div class="searchText">
+            <span>Just Find For Something ??</span>
+        </div>
+        <svg class="icon" aria-hidden="true" id="closeWrapper">
+            <use xlink:href="#icon-ic_searchclosed"></use>
+        </svg>
+    </div>
+
+    <div class="mainCard">
+        <div class="one clearfix">
+            <section class="main">
+                <div class="eden">E D E N</div>
+                <div class="topNav clearfix">
+                    <div class="logo">
+                        <span>NAVIGATION PAGE</span>
+                    </div>
+                    <div class="menuList">
+                        <svg class="icon" aria-hidden="true" id="cx">
+                            <use xlink:href="#icon-cx"></use>
+                        </svg>
+                        <span>MENU</span>
+                        <svg class="icon" aria-hidden="true" id="menu">
+                            <use xlink:href="#icon-menu"></use>
+                        </svg>
+                        <ul class="ulMenu" id="ulMenu">
+                            <li id="mainPage">主页</li>
+                            <li id="gitHubPage">GitHub</li>
+                            <li id="blogPage">博客</li>
+                            <li id="spacePage">空间</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="selectors">
+                    <div class="github">
+                        <svg class="icon" aria-hidden="true" id="gitHubIcon">
+                            <use xlink:href="#icon-github"></use>
+                        </svg>
+                    </div>
+
+                    <div class="sf">
+                        <svg class="icon" aria-hidden="true" id="blogIcon">
+                            <use xlink:href="#icon-segmentfault"></use>
+                        </svg>
+                    </div>
+
+                    <div class="ins">
+                        <svg class="icon" aria-hidden="true" id="insIcon">
+                            <use xlink:href="#icon-ins"></use>
+                        </svg>
+                    </div>
+                </div>
+
+            </section>
+            <section class="image"></section>
+        </div>
+        <div class="two clearfix">
+            <section class="introduce"></section>
+            <section class="menu"></section>
+        </div>
+    </div>
+</body>
+<script src="//at.alicdn.com/t/font_1544620_c123hsw9utp.js"></script>
+<script src="//at.alicdn.com/t/font_1471429_epr33qww6s.js"></script>
+<script src="./vendor/jquery/jquery-3.4.1.min.js"></script>
+<script src="./js/main.js"></script>
+
+</html>

@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.icon {
+  vertical-align: -0.15em;
+  overflow: hidden;
+}
+body {
+  background: linear-gradient(to bottom, #e4e4e6 0%, #dddddf 51%, #e3e3e5 100%);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: black;
+  opacity: 0.5;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  display: none;
+}
+.wrapper .searchPage {
+  max-width: 600px;
+  height: 100px;
+  margin: 150px auto;
+  border-radius: 10px;
+  background: grey;
+  position: relative;
+}
+.wrapper .searchText {
+  color: grey;
+  text-align: center;
+  height: 200px;
+  cursor: default;
+}
+.wrapper svg {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  width: 50px;
+  height: 50px;
+  background: grey;
+  border-radius: 50%;
+  border: 1px solid grey;
+  vertical-align: middle;
+}
+.wrapper svg:hover {
+  background: wheat;
+  cursor: pointer;
+}
+.wrapper .searchText span {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.wrapper .searchPage #input {
+  height: 70px;
+  width: 75%;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 20px;
+  font-size: 20px;
+}
+.wrapper .searchPage #input:focus {
+  outline: none;
+}
+.wrapper .searchPage #submit {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  margin-right: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  background: grey;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+}
+.wrapper .searchPage #submit:focus {
+  outline: none;
+}
+.wrapper .searchPage #submit:hover {
+  cursor: pointer;
+  color: wheat;
+  border: 1px solid wheat;
+}
+.mainCard {
+  position: absolute;
+  height: 600px;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 1200px;
+  margin: auto;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.mainCard section {
+  height: 300px;
+  width: 50%;
+  float: left;
+}
+.mainCard section.main {
+  background: #ffffff;
+  position: relative;
+}
+.mainCard section.main .eden {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: white;
+  margin-right: -8px;
+  transform: translateY(52%);
+  white-space: nowrap;
+  text-align: center;
+  max-width: 400px;
+  font-size: 100px;
+  font-weight: bold;
+  cursor: default;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.eden::before {
+  position: absolute;
+  content: "E D E N";
+  display: block;
+  top: 0;
+  left: 0;
+  height: 48%;
+  color: black;
+  overflow: hidden;
+  cursor: default;
+}
+.mainCard section.main .topNav {
+  margin: 20px 30px 0 30px;
+}
+.mainCard section.main .topNav .logo {
+  float: left;
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0c0c0c;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: default;
+}
+
+.mainCard section.main .topNav .menuList {
+  float: right;
+  position: relative;
+  transition: all 0.3s;
+  cursor: default;
+}
+.mainCard section.main .topNav .menuList span {
+  line-height: 40px;
+  color: #3a3a3a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  cursor: default;
+}
+.mainCard section.main .topNav .menuList svg {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  vertical-align: top;
+  fill: #3a3a3a;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.mainCard section.main .topNav .menuList svg:nth-child(1) {
+  margin: 0 60px;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+.mainCard section.main .topNav .menuList svg:hover {
+  transform: scale(1.2);
+}
+svg#menu:hover ~ ul {
+  display: block;
+  animation: submenuSlide 0.4s;
+}
+svg#menu:hover ~ ul > li {
+  display: block;
+  animation: submenuSlideOne 0.4s;
+}
+@keyframes submenuSlide {
+  0% {
+    margin-right: 100%;
+  }
+  100% {
+    margin-right: 0%;
+  }
+}
+@keyframes submenuSlideOne {
+  0% {
+    margin-top: 100%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+.mainCard section.main .topNav .menuList ul {
+  text-decoration: none;
+  list-style: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  white-space: nowrap;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #d8d7da;
+  transition: all 0.3s;
+  display: none;
+}
+.mainCard section.main .topNav .menuList ul li {
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  margin: 20px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.mainCard section.main .topNav .menuList ul li:hover {
+  color: blanchedalmond;
+  border: 1px solid blanchedalmond;
+  transform: scale(1.1);
+}
+.mainCard section.main div.selectors {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 10px;
+}
+.mainCard section.main div.selectors svg {
+  height: 20px;
+  width: 20px;
+  margin: 10px;
+  vertical-align: top;
+  cursor: pointer;
+}
+.mainCard section.main .github {
+  bottom: 15px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 20px;
+  cursor: pointer;
+}
+.mainCard section.main .sf {
+  bottom: 55px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 20px;
+  cursor: pointer;
+}
+.mainCard section.main .ins {
+  bottom: 95px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 20px;
+}
+.mainCard section.main .github:hover,
+.mainCard section.main .sf:hover,
+.mainCard section.main .ins:hover {
+  border: 1px solid blanchedalmond;
+  transform: scale(1.1);
+}
+.mainCard section.image {
+  background: linear-gradient(to bottom, #e4e4e6 0%, #dad9dc 2%, #b2b2b4 100%);
+}
+.mainCard section.introduce {
+  background: linear-gradient(to bottom, #e4e4e6 0%, #dad9dc 2%, #b2b2b4 100%);
+}
+.mainCard section.menu {
+  background: #ffffff;
+}
