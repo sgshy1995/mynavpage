@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
   transition: all 0.3s;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 *::before,
 *::after {
@@ -31,7 +37,7 @@ body {
   opacity: 0.5;
   width: 100%;
   height: 100vh;
-  z-index: 1;
+  z-index: 3;
   display: none;
 }
 .wrapper .searchPage {
@@ -129,19 +135,20 @@ body {
   right: 0;
   bottom: 0;
   color: white;
-  margin-right: -8px;
+  margin-right: -3px;
   transform: translateY(52%);
   white-space: nowrap;
   text-align: center;
   max-width: 400px;
-  font-size: 100px;
+  font-size: 120px;
   font-weight: bold;
   cursor: default;
   font-family: Arial, Helvetica, sans-serif;
+  z-index: 1;
 }
 .eden::before {
   position: absolute;
-  content: "E D E N";
+  content: "EDEN";
   display: block;
   top: 0;
   left: 0;
@@ -193,7 +200,8 @@ body {
   vertical-align: middle;
 }
 .mainCard section.main .topNav .menuList svg:hover {
-  transform: scale(1.2);
+  fill: #d8d7da;
+  transform: scale(1.1);
 }
 svg#menu:hover ~ ul {
   display: block;
@@ -231,6 +239,7 @@ svg#menu:hover ~ ul > li {
   border: 1px solid #d8d7da;
   transition: all 0.3s;
   display: none;
+  z-index: 2;
 }
 .mainCard section.main .topNav .menuList ul li {
   text-align: center;
@@ -244,8 +253,8 @@ svg#menu:hover ~ ul > li {
   transition: all 0.3s;
 }
 .mainCard section.main .topNav .menuList ul li:hover {
-  color: blanchedalmond;
-  border: 1px solid blanchedalmond;
+  color: #d8d7da;
+  border: 1px solid #d8d7da;
   transform: scale(1.1);
 }
 .mainCard section.main div.selectors {
@@ -284,15 +293,245 @@ svg#menu:hover ~ ul > li {
 .mainCard section.main .github:hover,
 .mainCard section.main .sf:hover,
 .mainCard section.main .ins:hover {
-  border: 1px solid blanchedalmond;
+  border: 1px solid #d8d7da;
   transform: scale(1.1);
+  fill: #d8d7da;
 }
 .mainCard section.image {
   background: linear-gradient(to bottom, #e4e4e6 0%, #dad9dc 2%, #b2b2b4 100%);
+  position: relative;
+}
+.mainCard section.image .img-one{
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  overflow: hidden;
+}
+.mainCard section.image .img-two{
+  position: absolute;
+  top: 0;
+  left: 300px;
+  text-align: center;
+  overflow: hidden;
+}
+.mainCard section.image .img-three{
+  position: absolute;
+  top: 150px;
+  left: 300px;
+  text-align: center;
+  overflow: hidden;
+}
+.mainCard section.image>div:hover{
+  background: black;
+  opacity: 0.5;
+}
+.mainCard section.image .imgText{
+  position: absolute;
+  font-size: 24px;
+  color: #000000;
+  opacity: 1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.mainCard section.image svg{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  opacity: 0;
+}
+.mainCard section.image .img-one .imgText{
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-400%);
+}
+.mainCard section.image .img-one svg{
+  top: 170px;
+  left: 50%;
+  transform: translateX(-50%) translateY(400%);
+}
+.mainCard section.image .img-one:hover .imgText{
+  transform: translateX(-50%) translateY(0);
+}
+.mainCard section.image .img-one:hover svg{
+  transform: translateX(-50%) translateY(0);
+  opacity: 0.5;
+}
+.mainCard section.image .img-one svg:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+.mainCard section.image .img-two .imgText{
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-400%);
+}
+.mainCard section.image .img-two svg{
+  top: 95px;
+  left: 50%;
+  transform: translateX(-50%) translateY(400%);
+}
+.mainCard section.image .img-two:hover .imgText{
+  transform: translateX(-50%) translateY(0);
+}
+.mainCard section.image .img-two:hover svg{
+  transform: translateX(-50%) translateY(0);
+  opacity: 0.5;
+}
+.mainCard section.image .img-two svg:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+.mainCard section.image .img-three .imgText{
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-400%);
+}
+.mainCard section.image .img-three svg{
+  top: 95px;
+  left: 50%;
+  transform: translateX(-50%) translateY(400%);
+}
+.mainCard section.image .img-three:hover .imgText{
+  transform: translateX(-50%) translateY(0);
+}
+.mainCard section.image .img-three:hover svg{
+  transform: translateX(-50%) translateY(0);
+  opacity: 0.5;
+}
+.mainCard section.image .img-three svg:hover{
+  opacity: 1;
+  cursor: pointer;
 }
 .mainCard section.introduce {
   background: linear-gradient(to bottom, #e4e4e6 0%, #dad9dc 2%, #b2b2b4 100%);
 }
 .mainCard section.menu {
   background: #ffffff;
+  position: relative;
+}
+.mainCard section.menu .sheng {
+  -webkit-text-stroke: 1px #666666;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: default;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-weight: bold;
+  transform: rotate(270deg) translateX(40%) translateY(-250%);
+  font-size: 140px;
+  letter-spacing: -10px;
+}
+.mainCard section.menu .design {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  font-size: 24px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+.mainCard section.menu .notice {
+  position: absolute;
+  left: 20%;
+  top: 60%;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: rgb(206, 201, 201);
+}
+.mainCard section.menu .viewAll {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 210px;
+  height: 66px;
+  background: black;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Microsoft Yahei", "微软雅黑";
+}
+.mainCard section.menu .viewAll span {
+  color: white;
+  font-size: 24px;
+  line-height: 66px;
+  display: inline-block;
+}
+.mainCard section.menu .viewAll svg#viewAllIcon {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  transform: translateX(500%);
+}
+.mainCard section.menu .viewAll ol#olOne {
+  position: absolute;
+  right: 10%;
+  bottom: 100%;
+  list-style: none;
+  cursor: default;
+  white-space: nowrap;
+  border: 2px solid #b4b4b6;
+  border-left: none;
+  border-bottom: none;
+  color: transparent;
+}
+.mainCard section.menu .viewAll ol#olTwo {
+  position: absolute;
+  right: 10%;
+  bottom: 85%;
+  list-style: none;
+  cursor: default;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  transform: translateX(400%);
+  z-index: 1;
+}
+.mainCard section.menu .viewAll ol li {
+  margin: 10px 0;
+  text-align: right;
+  color: #c3c3c3;
+  cursor: pointer;
+  padding-right: 10px;
+  transform: translateX(200%);
+}
+.mainCard section.menu .viewAll ol li:nth-child(1) {
+  transition: 0.2s;
+}
+.mainCard section.menu .viewAll ol li:nth-child(2) {
+  transition: 0.3s;
+}
+.mainCard section.menu .viewAll ol li:nth-child(3) {
+  transition: 0.4s;
+}
+.mainCard section.menu .viewAll ol li:nth-child(4) {
+  transition: 0.5s;
+}
+.mainCard section.menu .viewAll ol li:nth-child(5) {
+  transition: 0.6s;
+}
+.mainCard section.menu .viewAll ol li:nth-child(6) {
+  margin: 10px 0 20px 0;
+  transition: 0.7s;
+}
+.mainCard section.menu .viewAll .viewButton:hover ~ ol#olTwo li {
+  transform: translateX(0);
+}
+.mainCard section.menu .viewAll .viewButton:hover ~ ol#olTwo {
+  transform: translateX(0);
+}
+.mainCard section.menu .viewAll ol#olTwo li:hover {
+  color: #3a3a3a;
+}
+.mainCard section.menu .viewAll svg#xiangmuIcon {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 35%;
+  bottom: 200%;
+  cursor: default;
 }
